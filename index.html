@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTU Article</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="login-overlay" class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" id="login-btn">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+    <!-- Article content -->
+    <div id="article-content" class="article-container">
+        <header>
+            <h1>CTU News</h1>
+            <p class="sub-title">CTU Oval - Danao Campus</p>
+            <p>11 October, 2024 &bullet; www.ctu.edu.ph &bullet; CTU - Danao Campus</p>
+        </header>
+
+        <div class="article-section">
+            <div class="main-article">
+                <h2 class="border">Ramon M. Durano Sr. Memorial Sports Complex (CTU-Danao Oval)</h2>
+                <img src="picture/oval.jpg" alt="CTU Oval - Danao Campus" class="oval">
+                <p class="article-text">The <b>Cebu Technological University Oval in Danao Campus</b>, officially known as the <b>Ramon M. Durano Sr. Memorial Sports Complex</b>, stands as an iconic sports and events venue in Danao City, Cebu. Its 8-lane rubberized track has been designed not only to cater to university athletes but also to attract aspiring fitness enthusiasts and the community at large. The state-of-the-art facility has become the go-to location for a multitude of events, ranging from university athletic meets to grand concerts, festivals, and other prestigious gatherings.</p>
+                <h2>A Multi-purpose Facility for the Community</h2>
+                <p class="article-text">The CTU Oval has redefined its role beyond a mere sports complex. It serves as a multifaceted arena that brings together people from various walks of life. Its multipurpose nature is exemplified through its capacity to host a variety of events, providing a platform for both physical and cultural engagement. This year, it has become the venue for some of the most memorable celebrations in Danao City.</p>
+            </div>
+        </div>
+        
+        <div class="article-section">
+            <div class="event">
+                <h3>1. Kalikasan, Kabataan, Kalayaan: A Youth Music Festival</h3>
+                <p class="article-text">One of the standout events at the CTU Oval this year was the <b>“Kalikasan, Kabataan, Kalayaan”</b> (Nature, Youth, Freedom) music festival. Held on June 12, 2024, the festival was a vibrant celebration of youth and national pride, aligning with the Independence Day festivities. Organized by the <b>SAVE ME</b> Movement <b>(Students’ Actions Vital to the Environment and Mother Earth Movement)</b>, the event was a testament to the organization’s commitment to environmental advocacy and youth empowerment.</p>
+                <img src="picture/concertt.jpeg" alt="Kalikasan, Kabataan, Kalayaan Music Festival" class="event">
+                <p class="srcpic"><i>Source: Kami Naman Ph</i></p>
+                <p class="article-text">The festival featured stellar performances by prominent Filipino artists, including KZ Tandingan, Illest Morena, Yuki Sakamoto, Playertwo, and Over October. Their energetic performances set the tone for an inspiring evening, captivating the audience with music that resonated deeply with the themes of freedom and progress. Hosted by CJ Villavicencio, the concert not only entertained but also highlighted the importance of environmental stewardship, leadership, and youth involvement.</p>
+            </div>
+            <div class="event">
+                <h3>2. Karansa Festival: A Cultural Extravaganza</h3>
+                <p class="article-text">Following the youth music festival, the CTU Oval continued its streak of hosting high-profile events by serving as the venue for the annual <b>Karansa Festival.</b> Celebrated on September 15, 2024, this festival is the official cultural event of Danao City, known for its vibrant and colorful performances. The Karansa Festival is a display of Danao’s rich cultural heritage, featuring traditional music, dances, and costumes that showcase the city’s unique identity.</p>
+                <img src="picture/karansa.jpg" alt="Karansa Festival" class="event">
+                <p class="srcpic"><i>Source: cebudailynews.inquirer.net</i></p>
+                <p class="article-text">The festival is more than just a spectacle; it is a cultural institution that draws in crowds from across the region. Each year, dancers in elaborate attire perform choreographed routines that embody the spirit of thanksgiving and community. The CTU Oval’s spacious grounds provided the perfect backdrop for the event’s large-scale festivities, ensuring that both performers and spectators had an unforgettable experience.</p>
+            </div>
+        </div>
+
+        <div class="article-section">
+            <div class="main-article">
+                <h2>A Beacon for Future Events</h2>
+                <p class="article-text">The success of these events has solidified the CTU Oval’s reputation as a premier venue for sports and cultural celebrations in Danao City. With its modern facilities and capacity to host large-scale gatherings, the complex is set to attract even more events in the coming years. It serves not only as a space for athletic and artistic expression but also as a symbol of community pride and development. The CTU Oval is more than just a sports complex; it is a cornerstone of Danao City’s cultural and social life, where the community comes together to celebrate, express, and engage. As more events take place here, the facility will continue to be a shining example of how spaces can be used to inspire, educate, and entertain—a true hub for growth and unity in the region.</p>
+                <img src="picture/oval2.jpg" alt="CTU Oval - Danao Campus" class="oval">
+            </div>
+        </div>
+
+        <footer>
+            <img src="picture/logo.png" alt="logo" class="footer-image">
+            <p>&copy; 2024 CTU Danao Campus. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript para sa login -->
+    <script>
+        document.getElementById('login-btn').addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                //mao ni ang part after mag log in, mo direct sa article
+                document.getElementById('login-overlay').style.display = 'none';
+                document.getElementById('article-content').style.display = 'block';
+            } else {
+                alert('Please enter both username and password.');
+            }
+        });
+    </script>
+</body>
+</html>
